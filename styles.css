@@ -1,0 +1,42 @@
+* { box-sizing: border-box; }
+
+html, body { min-height: 100%; margin: 0; }
+
+body {
+  min-width: 280px;
+  background: #1c1c1c;
+}
+
+.landing {
+  position: relative;
+  width: min(100%, 375px);
+  aspect-ratio: 375 / 1008;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #151515;
+}
+
+.landing-art { display: block; width: 100%; height: 100%; }
+
+.order-hotspot,
+.terms-hotspot,
+.privacy-hotspot,
+.contact-hotspot,
+.faq-hotspot { position: absolute; border-radius: 8px; }
+
+/* The supplied composition already contains the CTA and legal labels. */
+.order-hotspot { top: 35.4%; left: 4.5%; width: 91%; height: 5.8%; border-radius: 32px; }
+.terms-hotspot { top: 94%; left: 6%; width: 33%; height: 2.3%; }
+.privacy-hotspot { top: 94%; left: 39%; width: 24%; height: 2.3%; }
+.contact-hotspot { top: 94%; left: 63%; width: 31%; height: 2.3%; }
+.faq-hotspot { top: 97.5%; left: 33%; width: 35%; height: 2.1%; }
+
+.order-hotspot:focus-visible,
+.terms-hotspot:focus-visible,
+.privacy-hotspot:focus-visible,
+.contact-hotspot:focus-visible,
+.faq-hotspot:focus-visible { outline: 3px solid #31fa73; outline-offset: 2px; }
+
+@media (min-width: 376px) {
+  .landing { box-shadow: 0 0 32px rgb(0 0 0 / .25); }
+}
